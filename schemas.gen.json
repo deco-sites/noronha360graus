@@ -94,6 +94,7 @@
               "deco-sites/noronha360graus/sections/ProductDetails.tsx",
               "deco-sites/noronha360graus/sections/ProductShelf.tsx",
               "deco-sites/noronha360graus/sections/SearchResult.tsx",
+              "deco-sites/noronha360graus/sections/Shortcuts.tsx",
               "deco-sites/noronha360graus/sections/WhatsApp.tsx",
               "deco-sites/noronha360graus/sections/WishlistGallery.tsx",
               "deco-sites/std/sections/Analytics.tsx",
@@ -8526,6 +8527,64 @@
       ],
       "title": "deco-sites/noronha360graus/components/search/SearchResult.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9ub3JvbmhhMzYwZ3JhdXMvc2VjdGlvbnMvU2hvcnRjdXRzLnRzeA==@Item": {
+      "type": "object",
+      "properties": {
+        "img": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Imagem"
+        },
+        "link": {
+          "type": "string",
+          "title": "Link de Redirecionamento"
+        },
+        "alt": {
+          "type": "string",
+          "title": "Texto Alternativo"
+        },
+        "title": {
+          "type": "string",
+          "title": "Título da Imagem"
+        },
+        "width": {
+          "type": "number",
+          "title": "Largura da Imagem"
+        },
+        "height": {
+          "type": "number",
+          "title": "Altura da Imagem"
+        }
+      },
+      "required": [
+        "img",
+        "link",
+        "alt",
+        "title",
+        "width",
+        "height"
+      ],
+      "title": "Item"
+    },
+    "ZGVjby1zaXRlcy9ub3JvbmhhMzYwZ3JhdXMvc2VjdGlvbnMvU2hvcnRjdXRzLnRzeA==@Item[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9ub3JvbmhhMzYwZ3JhdXMvc2VjdGlvbnMvU2hvcnRjdXRzLnRzeA==@Item"
+      },
+      "title": "Item[]"
+    },
+    "ZGVjby1zaXRlcy9ub3JvbmhhMzYwZ3JhdXMvc2VjdGlvbnMvU2hvcnRjdXRzLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9ub3JvbmhhMzYwZ3JhdXMvc2VjdGlvbnMvU2hvcnRjdXRzLnRzeA==@Item[]",
+          "title": "Shortcuts"
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "title": "deco-sites/noronha360graus/sections/Shortcuts.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9ub3JvbmhhMzYwZ3JhdXMvY29tcG9uZW50cy91aS9XaGF0c0FwcC50c3g=@Props": {
       "type": "object",
       "properties": {
@@ -11163,6 +11222,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9ub3JvbmhhMzYwZ3JhdXMvc2VjdGlvbnMvU2hvcnRjdXRzLnRzeA==": {
+      "title": "deco-sites/noronha360graus/sections/Shortcuts.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9ub3JvbmhhMzYwZ3JhdXMvc2VjdGlvbnMvU2hvcnRjdXRzLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/noronha360graus/sections/Shortcuts.tsx"
+          ],
+          "default": "deco-sites/noronha360graus/sections/Shortcuts.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9ub3JvbmhhMzYwZ3JhdXMvc2VjdGlvbnMvV2hhdHNBcHAudHN4": {
       "title": "deco-sites/noronha360graus/sections/WhatsApp.tsx",
       "type": "object",
@@ -12370,6 +12450,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9ub3JvbmhhMzYwZ3JhdXMvc2VjdGlvbnMvU2VhcmNoUmVzdWx0LnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9ub3JvbmhhMzYwZ3JhdXMvc2VjdGlvbnMvU2hvcnRjdXRzLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9ub3JvbmhhMzYwZ3JhdXMvc2VjdGlvbnMvV2hhdHNBcHAudHN4"
