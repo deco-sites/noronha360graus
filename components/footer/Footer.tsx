@@ -68,7 +68,7 @@ function Footer({ sections = [] }: Props) {
             {/* Desktop view */}
             <ul class="hidden sm:flex flex-row gap-20">
               {sections.map((section) => (
-                <li>
+                <li class="basis-1/5">
                   <div>
                     <span class="font-medium text-xl text-primary-content uppercase">
                       {section.label}
