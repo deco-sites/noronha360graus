@@ -110,11 +110,11 @@ function ProductCard({ product, preload, itemListName }: Props) {
       {/* Prices & Name */}
       <div class="card-body">
         <h2 class="card-title whitespace-nowrap overflow-hidden">{name}</h2>
-        <div class="flex items-end gap-2">
+        <div class="flex items-center justify-center gap-2">
           <span class="line-through text-base-300 text-xs">
             {formatPrice(listPrice, offers!.priceCurrency!)}
           </span>
-          <span class="text-secondary">
+          <span class="text-secondary text-lg">
             {formatPrice(price, offers!.priceCurrency!)}
           </span>
         </div>

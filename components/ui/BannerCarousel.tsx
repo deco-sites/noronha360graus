@@ -85,7 +85,7 @@ function Dots({ images, interval = 0 }: Props) {
           `,
         }}
       />
-      <ul class="carousel justify-center col-span-full gap-4 z-10 row-start-4">
+      <ul class="carousel justify-center col-span-full gap-4 z-10 row-start-4 hidden md:flex">
         {images?.map((_, index) => (
           <li class="carousel-item">
             <Slider.Dot index={index}>
@@ -106,7 +106,7 @@ function Dots({ images, interval = 0 }: Props) {
 function Buttons() {
   return (
     <>
-      <div class="flex items-center justify-center z-10 col-start-1 row-start-2">
+      <div class="items-center justify-center z-10 col-start-1 row-start-2 hidden md:flex">
         <Slider.PrevButton class="btn btn-circle glass">
           <Icon
             class="text-base-100"
@@ -116,7 +116,7 @@ function Buttons() {
           />
         </Slider.PrevButton>
       </div>
-      <div class="flex items-center justify-center z-10 col-start-3 row-start-2">
+      <div class="items-center justify-center z-10 col-start-3 row-start-2 hidden md:flex">
         <Slider.NextButton class="btn btn-circle glass">
           <Icon
             class="text-base-100"
