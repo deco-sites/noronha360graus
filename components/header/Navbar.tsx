@@ -26,7 +26,12 @@ function Navbar({ items, searchbar }: {
           style={{ minHeight: navbarHeight }}
           aria-label="Store logo"
         >
-          <Icon id="Logo" width={126} height={16} />
+          <Image
+            src="https://thumb.braavo.me/neuronha/0/3608396007.webp"
+            alt="Neuronha"
+            width={120}
+            height={80}
+          />
         </a>
 
         <div class="flex gap-1">
