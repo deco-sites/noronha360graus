@@ -44,7 +44,10 @@ function Newsletter() {
             class="flex-grow input input-primary"
             placeholder="Seu e-mail"
           />
-          <button class="btn disabled:loading uppercase" disabled={loading}>
+          <button
+            class="btn disabled:loading uppercase bg-secondary"
+            disabled={loading}
+          >
             Enviar
           </button>
         </div>
