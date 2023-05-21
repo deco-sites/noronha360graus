@@ -45,7 +45,7 @@ function Newsletter() {
             placeholder="Seu e-mail"
           />
           <button
-            class="btn disabled:loading uppercase bg-secondary"
+            class="btn disabled:loading uppercase bg-secondary hover:bg-norteal"
             disabled={loading}
           >
             Enviar
