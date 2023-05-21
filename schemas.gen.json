@@ -8545,23 +8545,13 @@
         "title": {
           "type": "string",
           "title": "Título da Imagem"
-        },
-        "width": {
-          "type": "number",
-          "title": "Largura da Imagem"
-        },
-        "height": {
-          "type": "number",
-          "title": "Altura da Imagem"
         }
       },
       "required": [
         "img",
         "link",
         "alt",
-        "title",
-        "width",
-        "height"
+        "title"
       ],
       "title": "Item"
     },
@@ -8578,10 +8568,20 @@
         "items": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9ub3JvbmhhMzYwZ3JhdXMvc2VjdGlvbnMvU2hvcnRjdXRzLnRzeA==@Item[]",
           "title": "Shortcuts"
+        },
+        "width": {
+          "type": "number",
+          "title": "Largura dos Itens"
+        },
+        "height": {
+          "type": "number",
+          "title": "Altura dos Itens"
         }
       },
       "required": [
-        "items"
+        "items",
+        "width",
+        "height"
       ],
       "title": "deco-sites/noronha360graus/sections/Shortcuts.tsx@Props"
     },

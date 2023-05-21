@@ -3,6 +3,12 @@ import type { Image } from "deco-sites/std/components/types.ts";
 export interface Props {
   /** @title Shortcuts */
   items: Item[];
+
+  /** @title Largura dos Itens */
+  width: number;
+
+  /** @title Altura dos Itens */
+  height: number;
 }
 
 export interface Item {
@@ -17,12 +23,6 @@ export interface Item {
 
   /** @title Título da Imagem */
   title: string;
-
-  /** @title Largura da Imagem */
-  width: number;
-
-  /** @title Altura da Imagem */
-  height: number;
 }
 
 const itemsProps: Item[] = [
@@ -32,8 +32,6 @@ const itemsProps: Item[] = [
     link: "/",
     alt: "WhatsApp",
     title: "WhatsApp",
-    width: 24,
-    height: 24,
   },
   {
     img:
@@ -41,8 +39,6 @@ const itemsProps: Item[] = [
     link: "/",
     alt: "Messages",
     title: "Messages",
-    width: 24,
-    height: 24,
   },
   {
     img:
@@ -50,8 +46,6 @@ const itemsProps: Item[] = [
     link: "/",
     alt: "Ruler",
     title: "Ruler",
-    width: 24,
-    height: 24,
   },
   {
     img:
@@ -59,8 +53,6 @@ const itemsProps: Item[] = [
     link: "/",
     alt: "Truck Delivery",
     title: "Truck Delivery",
-    width: 24,
-    height: 24,
   },
   {
     img:
@@ -68,12 +60,10 @@ const itemsProps: Item[] = [
     link: "/",
     alt: "Arrows Right Left",
     title: "Arrows Right Left",
-    width: 24,
-    height: 24,
   },
 ];
 
-const Shortcuts = ({ items = itemsProps }: Props) => {
+const Shortcuts = ({ items = itemsProps, width = 24, height = 24 }: Props) => {
   return (
     <ul class="fixed z-20 top-1/2 -translate-y-1/2 right-0 bg-white divide-y divide-gray-400 drop-shadow-md border border-gray-400 border-r-0 rounded-lg rounded-r-none">
       {items.map((item) => (
@@ -82,15 +72,14 @@ const Shortcuts = ({ items = itemsProps }: Props) => {
             href={item.link}
             target="_blank"
             data-tip={item.title}
-            class="block p-2.5 lg:tooltip lg:tooltip-left rounded-none text-white text-center leading-4"
+            class="flex justify-center items-center p-2.5 lg:tooltip lg:tooltip-left rounded-none text-white text-center leading-4 h-11"
           >
             <img
-              width={item.width}
-              height={item.height}
+              width={width}
+              height={height}
               src={item.img}
               alt={item.alt}
-            >
-            </img>
+            />
           </a>
         </li>
       ))}

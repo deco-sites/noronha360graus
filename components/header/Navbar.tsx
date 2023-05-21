@@ -28,8 +28,8 @@ function Navbar({ items, searchbar }: {
           <img
             src="https://thumb.braavo.me/neuronha/0/3608396007.webp"
             alt="Neuronha"
-            width={70}
-            height={30}
+            width={75}
+            height={50}
             class="h-auto"
           />
         </a>
