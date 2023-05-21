@@ -7,11 +7,16 @@ export interface Highlight {
   alt: string;
   href: string;
   label: string;
+  /**
+   * @title Visiblidade do texto
+   * @default visible
+   */
+  textVisibility: "visible" | "hidden";
 }
 
 export interface Props {
-  highlights?: Highlight[];
   title: string;
+  highlights?: Highlight[];
 }
 
 function Highlights({ highlights = [], title }: Props) {
@@ -21,25 +26,27 @@ function Highlights({ highlights = [], title }: Props) {
         <span class="font-medium text-2xl">{title}</span>
       </h2>
 
-      <Slider class="carousel carousel-center sm:carousel-end gap-6">
-        {highlights.map(({ href, src, alt, label }, index) => (
+      <Slider class="carousel carousel-center sm:justify-center gap-6">
+        {highlights.map(({ href, src, alt, label, textVisibility }, index) => (
           <Slider.Item
             index={index}
-            class="carousel-item first:ml-6 sm:first:ml-0 last:mr-6 sm:last:mr-0 min-w-[190px]"
+            class="carousel-item first:ml-6 sm:first:ml-0 last:mr-6 sm:last:mr-0 min-w-[335px]"
           >
             <a href={href} class="card card-compact bg-base-100">
-              <figure>
+              <figure class="relative rounded-lg before:absolute before:w-full before:h-full before:opacity-0 before:bg-black/50 before:hover:opacity-100 before:transition-opacity before:duration-300">
                 <Image
-                  class="rounded-[40px]"
                   src={src}
                   alt={alt}
-                  width={190}
-                  height={265}
+                  width={335}
+                  height={335}
+                  class="h-auto"
                 />
               </figure>
-              <div class="card-body items-center">
-                <h2 class="card-title text-base font-medium">{label}</h2>
-              </div>
+              {textVisibility === "visible" && (
+                <div class="card-body items-center">
+                  <h2 class="card-title text-base font-medium">{label}</h2>
+                </div>
+              )}
             </a>
           </Slider.Item>
         ))}
