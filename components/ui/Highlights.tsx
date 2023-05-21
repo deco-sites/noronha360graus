@@ -34,7 +34,7 @@ function Highlights({ highlights = [], title }: Props) {
         <span class="font-medium text-2xl">{title}</span>
       </h2>
 
-      <Slider class="carousel carousel-center gap-6 row-span-3 row-start-2">
+      <Slider class="carousel carousel-center gap-6 col-span-3 row-span-3 row-start-2">
         {highlights.map((
           { href, src, alt, label, textVisibility },
           index,
