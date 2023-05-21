@@ -29,7 +29,7 @@ function Mosaic({ title, titleIcon, images }: Props) {
         )}
         <span>{title}</span>
       </h2>
-      <div class="grid grid-cols-6 grid-rows-3 gap-2 mx-auto">
+      <div class="grid grid-cols-6 grid-rows-3 gap-2 mx-auto rounded-lg overflow-hidden">
         {images.map(({ src, alt }) => (
           <div
             class={`
