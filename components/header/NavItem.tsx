@@ -12,9 +12,9 @@ function NavItem({ item }: { item: INavItem }) {
   const { href, label, children, image } = item;
 
   return (
-    <li class="group flex items-center">
+    <li class="group flex items-center font-bold">
       <a href={href} class="px-4 py-3">
-        <span class="group-hover:underline">
+        <span class="group-hover:underline uppercase">
           {label}
         </span>
       </a>
@@ -39,7 +39,7 @@ function NavItem({ item }: { item: INavItem }) {
               {children.map((node) => (
                 <li class="p-6">
                   <a class="hover:underline" href={node.href}>
-                    <span>{node.label}</span>
+                    <span class="uppercase">{node.label}</span>
                   </a>
 
                   <ul class="flex flex-col gap-1 mt-4">

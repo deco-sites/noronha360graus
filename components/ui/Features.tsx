@@ -1,10 +1,8 @@
-import Icon, {
-  AvailableIcons,
-} from "$store/components/ui/Icon.tsx";
+import Icon, { AvailableIcons } from "$store/components/ui/Icon.tsx";
 
 export interface Feature {
   /**
-   * @description Image src
+   *  @description Image src
    */
   icon: AvailableIcons;
   /**
@@ -25,7 +23,7 @@ function FeatureHighlights(
   { features }: Props,
 ) {
   return (
-    <div class="container min-h-[280px] p-6 sm:px-0 sm:py-10">
+    <div class="container min-h-[280px] p-4.5 sm:px-0 sm:py-10">
       <div class="border-base-200 border border-solid">
         <div class="flex flex-col justify-evenly divide-y divide-base-200 mx-6 sm:flex-row sm:divide-y-0 sm:divide-x sm:mx-0 sm:my-10">
           {features.map(({ icon: id = "Truck", title, description }) => (
