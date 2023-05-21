@@ -75,9 +75,9 @@ const itemsProps: Item[] = [
 
 const Shortcuts = ({ items = itemsProps }: Props) => {
   return (
-    <ul class="fixed z-20 top-1/2 -translate-y-1/2 right-0">
+    <ul class="fixed z-20 top-1/2 -translate-y-1/2 right-0 bg-white divide-y border border-gray-400 border-r-0 rounded-lg rounded-r-none">
       {items.map((item) => (
-        <li class="bg-white border-2 border-solid border-gray-400 border-t-transparent flex justify-center items-center first:border-t-gray-400">
+        <li class="flex justify-center items-center">
           <a
             href={item.link}
             target="_blank"

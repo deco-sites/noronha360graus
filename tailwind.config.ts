@@ -29,10 +29,10 @@ export default {
     container: {
       center: true,
     },
-    colors: {
-      "norteal": "#00abb8",
-    },
     extend: {
+      colors: {
+        "norteal": "#00abb8",
+      },
       animation: {
         "slide-left": "slide-left-frame 0.4s ease normal",
         "slide-right": "slide-right-frame 0.4s ease normal",
